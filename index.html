@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outboundly | Find Your Next Opportunity</title>
+    <meta name="description" content="Outboundly helps you discover the best hiring companies in your field.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">Outboundly</div>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h1>Find your dream career <span>effortlessly</span>.</h1>
+                <p class="subtitle">Search through thousands of top-tier companies hiring right now.</p>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="job-search" placeholder="Search jobs (e.g. Product Designer)">
+                        <button id="search-btn" class="btn-primary">Search</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-section hidden">
+                <div class="results-header">
+                    <h2>Featured Companies</h2>
+                    <p>Matches found for your search</p>
+                </div>
+                <div id="results-list" class="results-grid">
+                    <!-- Results will be injected here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Outboundly. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
