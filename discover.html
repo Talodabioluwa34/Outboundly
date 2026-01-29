@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Opportunities | Outboundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="discover-page">
+    <div class="navbar-wrapper" id="sticky-nav">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Outboundly<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html#how-it-works">How it works</a>
+                <a href="index.html#why-outbound">Why Outbound</a>
+                <a href="discover.html" class="active-nav">Discover</a>
+            </div>
+            <button class="btn-nav">Start Outbound</button>
+        </nav>
+    </div>
+
+    <div class="app-container">
+
+        <main class="discover-main">
+            <header class="discover-header">
+                <div class="result-count" id="result-info">
+                    Showing 1 – 6 of 124 results
+                </div>
+                <div class="sort-controls">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-dropdown">
+                        <option value="latest">Latest</option>
+                        <option value="relevance">Relevance</option>
+                    </select>
+                </div>
+            </header>
+
+            <div class="results-list" id="discover-list">
+                <!-- Results will be injected here by JS -->
+            </div>
+
+            <footer class="pagination-container">
+                <div class="pagination">
+                    <button class="pag-btn disabled">Prev</button>
+                    <div class="pag-numbers">
+                        <span class="pag-num active">1</span>
+                        <span class="pag-num">2</span>
+                        <span class="pag-num">3</span>
+                        <span class="pag-num">...</span>
+                        <span class="pag-num">12</span>
+                    </div>
+                    <button class="pag-btn">Next</button>
+                </div>
+            </footer>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Outboundly. Proactive discovery for modern careers.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // Discovery page specific logic
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderDiscoverResults === 'function') {
+                renderDiscoverResults();
+            }
+        });
+    </script>
+</body>
+
+</html>

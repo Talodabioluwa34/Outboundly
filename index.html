@@ -1,39 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outboundly | Find Your Next Opportunity</title>
-    <meta name="description" content="Outboundly helps you discover the best hiring companies in your field.">
+    <title>Outboundly | Stop waiting. Start reaching out.</title>
+    <meta name="description"
+        content="Empowering your proactive job search. Identify top companies and generate AI-crafted outreach to land your dream role.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="app-container">
+    <div class="navbar-wrapper" id="sticky-nav">
         <nav class="navbar">
-            <div class="logo">Outboundly</div>
+            <a href="index.html" class="logo">Outboundly<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="#how-it-works">How it works</a>
+                <a href="#why-outbound">Why Outbound</a>
+                <a href="discover.html">Discover</a>
+            </div>
+            <button class="btn-nav">Start Outbound</button>
         </nav>
+    </div>
+
+    <div class="app-container">
 
         <main>
-            <section class="hero">
-                <h1>Find your dream career <span>effortlessly</span>.</h1>
-                <p class="subtitle">Search through thousands of top-tier companies hiring right now.</p>
-                
-                <div class="search-container">
-                    <div class="search-bar">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="text" id="job-search" placeholder="Search jobs (e.g. Product Designer)">
-                        <button id="search-btn" class="btn-primary">Search</button>
+            <section class="hero reveal-on-scroll">
+                <div class="hero-content">
+                    <h1 class="stagger-1">Build your future through <span>proactive discovery.</span></h1>
+                    <p class="subtitle stagger-2">Stop waiting for an invitation. Identify high-signal companies and
+                        initiate direct conversations with AI-crafted intelligence.</p>
+
+                    <div class="search-container stagger-3">
+                        <div class="search-bar">
+                            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="job-search"
+                                placeholder="Search roles, industries, or company types...">
+                            <button id="search-btn" class="btn-primary">Find Targets</button>
+                        </div>
+
+                        <div class="suggestion-chips">
+                            <span class="suggestion-label">Try:</span>
+                            <div class="chip-group">
+                                <button class="suggestion-chip">Fintech</button>
+                                <button class="suggestion-chip">Product Designer</button>
+                                <button class="suggestion-chip">Series A</button>
+                                <button class="suggestion-chip">Climate Tech</button>
+                            </div>
+                        </div>
+
+                        <div id="recent-searches" class="recent-searches-container hidden">
+                            <span class="recent-label">Recent Searches:</span>
+                            <div id="recent-pills" class="recent-pills"></div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-hint stagger-4">
+                        <span>Scroll to discover</span>
+                        <div class="mouse"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tease-continuation reveal-on-scroll">
+                <div class="tease-item stagger-1">
+                    <span class="tease-dot"></span>
+                    <span>Identify targets</span>
+                </div>
+                <div class="tease-line stagger-2"></div>
+                <div class="tease-item stagger-3">
+                    <span class="tease-dot"></span>
+                    <span>Get intelligence</span>
+                </div>
+                <div class="tease-line stagger-4"></div>
+                <div class="tease-item stagger-5">
+                    <span class="tease-dot"></span>
+                    <span>Direct outreach</span>
+                </div>
+            </div>
+
+            <section class="showcase-section alternate-bg-1 reveal-on-scroll">
+                <div class="section-badge stagger-1">Show, Don't Tell</div>
+                <h2 class="stagger-2">Discovery that actually works.</h2>
+                <div class="showcase-grid stagger-3">
+                    <div class="showcase-visual">
+                        <div class="discovery-card-preview">
+                            <div class="card-preview-header">
+                                <div class="preview-logo" style="background: var(--primary);"></div>
+                                <div class="preview-text">
+                                    <span class="p-title">Vortex AI</span>
+                                    <span class="p-sub">Series A • Generative Video</span>
+                                </div>
+                            </div>
+                            <div class="card-preview-body">
+                                <span class="p-label">Growth Signal</span>
+                                <p>Scaling infrastructure team (+14% Q4 growth). Recently closed $42M from Tier 1 VCs.
+                                </p>
+                                <div class="p-divider"></div>
+                                <span class="p-label">Outbound Script</span>
+                                <div class="p-script">"Hi, I saw Vortex is scaling its video infrastructure... I'd love
+                                    to discuss how my experience in distributed systems could..."</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Intelligence at a glance.</h3>
+                        <p>We don’t just find companies. We analyze funding, headcount, and mission to give you the
+                            perfect wedge for your outreach.</p>
+                        <ul class="benefit-list">
+                            <li><span>01</span> Precision mapping</li>
+                            <li><span>02</span> High-signal context</li>
+                            <li><span>03</span> AI-drafted scripts</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works" class="steps-section reveal-on-scroll">
+                <div class="section-badge stagger-1">The Method</div>
+                <h2 class="stagger-2">Bypass the black hole of job boards.</h2>
+                <div class="steps-grid stagger-3">
+                    <div class="step-card">
+                        <span class="step-num">Step 01</span>
+                        <h4>Precision Discovery</h4>
+                        <p>Identify companies that actually fit your career goals, filtered by signal, not just open
+                            listings.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">Step 02</span>
+                        <h4>Contextual Intelligence</h4>
+                        <p>Get high-signal talking points so you never go in cold. Know their mission as well as they
+                            do.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">Step 03</span>
+                        <h4>Strategic Outreach</h4>
+                        <p>Land meetings directly with decision-makers using personalized, value-first messaging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials-section alternate-bg-2 reveal-on-scroll">
+                <div class="section-badge stagger-1">Social Proof</div>
+                <div class="testimonials-grid stagger-2">
+                    <div class="testimonial-card">
+                        <p>“I stopped mass applying. Outboundly gave me the list and the words to actually start a
+                            conversation with the right people.”</p>
+                        <div class="testimonial-author">— Leo K., Software Engineer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>“Finally, a tool that respects the effort it takes to find a truly great company.
+                            Intentional,
+                            clean, and highly effective.”</p>
+                        <div class="testimonial-author">— Sarah J., Product Designer</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="final-cta reveal-on-scroll">
+                <div class="cta-anchor-wrapper">
+                    <div class="cta-content">
+                        <h2 class="stagger-1">Ready to take the direct path?</h2>
+                        <p class="stagger-2">Stop waiting for an invitation. Start the conversation yourself.</p>
+                        <button class="btn-primary-vibrant stagger-3"
+                            onclick="document.getElementById('job-search').focus()">Start Discovery</button>
                     </div>
                 </div>
             </section>
 
             <section id="results-section" class="results-section hidden">
                 <div class="results-header">
-                    <h2>Featured Companies</h2>
-                    <p>Matches found for your search</p>
+                    <h2>Discovery Results</h2>
+                    <p>High-potential targets based on your search metrics.</p>
                 </div>
                 <div id="results-list" class="results-grid">
                     <!-- Results will be injected here -->
@@ -42,9 +189,16 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2026 Outboundly. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Twitter</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 Outboundly. Proactive discovery for modern careers.</p>
         </footer>
+
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
